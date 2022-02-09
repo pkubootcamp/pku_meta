@@ -36,7 +36,7 @@ contract PKUMeta is ERC721Enumerable, Ownable {
             totalSupply() + tokenQuantity <= MAX_SUPPLY,
             "Sale would exceed max supply"
         );
-        require(_isSaleActive, "Sale must be active to mint NicMetas");
+        require(_isSaleActive, "Sale must be active to mint PKUMetas");
         require(
             balanceOf(msg.sender) + tokenQuantity <= maxBalance,
             "Sale would exceed max balance"
